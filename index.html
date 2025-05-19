@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbershop - Главная</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__text">BarberShop</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link active">Главная</a></li>
+                        <li class="nav__item"><a href="services.html" class="nav__link">Услуги</a></li>
+                        <li class="nav__item"><a href="booking.html" class="nav__link">Запись</a></li>
+                        <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header__phone">
+                    <a href="tel:+375(17)399-33-89" class="phone-link">+375(17)399-33-89</a>
+                </div>
+                <button class="menu-toggle" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <aside>
+        <section class="hero">
+            <div class="container">
+                <div class="hero__content">
+                    <h2 class="hero__title">Мужские стрижки<br> с характером</h2>
+                    <p class="hero__subtitle">Создаем индивидуальный образ для настоящих мужчин</p>
+                    <a href="booking.html" class="btn btn--primary">Записаться онлайн</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="advantages">
+            <div class="container">
+                <h2 class="section-title">Наши преимущества</h2>
+                <div class="advantages__list">
+                    <div class="advantage-item">
+                        <div class="advantage-item__icon">
+                            <i class="fas fa-cut"></i>
+                        </div>
+                        <h3 class="advantage-item__title">Профессиональные мастера</h3>
+                        <p class="advantage-item__text">Наши специалисты имеют богатый опыт работы и постоянно совершенствуют свои навыки</p>
+                    </div>
+                    <div class="advantage-item">
+                        <div class="advantage-item__icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="advantage-item__title">Удобное расписание</h3>
+                        <p class="advantage-item__text">Работаем каждый день с 10:00 до 21:00 без перерывов и выходных</p>
+                    </div>
+                    <div class="advantage-item">
+                        <div class="advantage-item__icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h3 class="advantage-item__title">Премиум сервис</h3>
+                        <p class="advantage-item__text">Чашка кофе и приятная атмосфера сделают процесс стрижки комфортным</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="popular-services">
+            <div class="container">
+                <h2 class="section-title">Популярные услуги</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-card__img">
+                            <img src="images/service-1.jpg" alt="Мужская стрижка">
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Мужская стрижка</h3>
+                            <p class="service-card__price">от 40 BYN</p>
+                            <a href="services.html" class="btn btn--secondary">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card__img">
+                            <img src="images/service-2.jpg" alt="Оформление бороды">
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Оформление бороды</h3>
+                            <p class="service-card__price">от 23 BYN</p>
+                            <a href="services.html" class="btn btn--secondary">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card__img">
+                            <img src="images/service-3.jpg" alt="Комплекс: стрижка + борода">
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Комплекс: стрижка + борода</h3>
+                            <p class="service-card__price">от 57 BYN</p>
+                            <a href="services.html" class="btn btn--secondary">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="services.html" class="btn btn--outline">Все услуги</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="container">
+                <div class="about__inner">
+                    <div class="about__content">
+                        <h2 class="section-title">О нашем барбершопе</h2>
+                        <p class="about__text">Мы создали место, где каждый мужчина может получить профессиональную стрижку и уход за бородой в приятной атмосфере. Наша философия — сочетание классических традиций барберского дела с современными техниками и трендами.</p>
+                        <p class="about__text">Наши мастера используют только профессиональные инструменты и косметику. Мы уделяем внимание каждой детали и учитываем все пожелания клиента.</p>
+                        <a href="contacts.html" class="btn btn--primary">О нас подробнее</a>
+                    </div>
+                    <div class="about__image">
+                        <img src="images/about.jpg" alt="О барбершопе">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">Что говорят наши клиенты</h2>
+                <div class="testimonials-slider">
+                    <div class="testimonial-item">
+                        <div class="testimonial-item__content">
+                            <p class="testimonial-item__text">Отличный сервис! Хожу сюда уже более года и всегда доволен результатом. Мастера знают свое дело, а атмосфера очень располагает.</p>
+                            <div class="testimonial-item__author">
+                                <div class="testimonial-item__name">Алексей К.</div>
+                                <div class="testimonial-item__rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-item__content">
+                            <p class="testimonial-item__text">Наконец-то нашел идеальное место для стрижки. Барберы понимают с полуслова, что хочу, и выполняют работу безупречно. Рекомендую!</p>
+                            <div class="testimonial-item__author">
+                                <div class="testimonial-item__name">Максим Д.</div>
+                                <div class="testimonial-item__rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <div class="cta__inner">
+                    <h2 class="cta__title">Запишитесь на стрижку уже сегодня</h2>
+                    <p class="cta__text">Воспользуйтесь онлайн-записью или позвоните нам</p>
+                    <div class="cta__buttons">
+                        <a href="booking.html" class="btn btn--primary">Записаться онлайн</a>
+                        <a href="tel:+375(17)399-33-89" class="btn btn--outline">Позвонить</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </aside>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__col">
+                    <a href="index.html" class="logo footer__logo">
+                        <span class="logo__text">BarberShop</span>
+                    </a>
+                    <p class="footer__desc">Профессиональный барбершоп для современных мужчин</p>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Навигация</h4>
+                    <ul class="footer__nav">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="services.html">Услуги</a></li>
+                        <li><a href="booking.html">Запись</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Контакты</h4>
+                    <ul class="footer__contacts">
+                        <li><i class="fas fa-map-marker-alt"></i> г. Минск, ул. Свердлова 13А</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+375(17)399-33-89">+375(17)399-33-89</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@barbershop.ru">info@barbershop.by</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Время работы</h4>
+                    <ul class="footer__hours">
+                        <li>Пн-Пт: 10:00 - 21:00</li>
+                        <li>Сб-Вс: 10:00 - 20:00</li>
+                    </ul>
+                    <div class="footer__social">
+                        <a href="#" class="social-link"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="social-link"><svg style="width: 22px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.5.5.2.9.5 1.3 1 .4.4.7.8 1 1.3.2.4.4 1 .5 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.5 2.2-.2.5-.5.9-1 1.3-.4.4-.8.7-1.3 1-.4.2-1 .4-2.2.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.5-.5-.2-.9-.5-1.3-1-.4-.4-.7-.8-1-1.3-.2-.4-.4-1-.5-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.5-2.2.2-.5.5-.9 1-1.3.4-.4.8-.7 1.3-1 .4-.2 1-.4 2.2-.5C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1 .1-1.5.2-1.9.4-.5.2-.8.4-1.1.7-.3.3-.6.7-.7 1.1-.2.4-.3.9-.4 1.9-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1 .2 1.5.4 1.9.2.5.4.8.7 1.1.3.3.7.6 1.1.7.4.2.9.3 1.9.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1-.1 1.5-.2 1.9-.4.5-.2.8-.4 1.1-.7.3-.3.6-.7.7-1.1.2-.4.3-.9.4-1.9.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1-.2-1.5-.4-1.9-.2-.5-.4-.8-.7-1.1-.3-.3-.7-.6-1.1-.7-.4-.2-.9-.3-1.9-.4-1.2-.1-1.6-.1-4.7-.1zm0 3.7a5.1 5.1 0 1 1 0 10.2 5.1 5.1 0 0 1 0-10.2zm0 1.8a3.3 3.3 0 1 0 0 6.6 3.3 3.3 0 0 0 0-6.6zm5.2-2.1a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/>
+            </svg></a>
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2025 BarberShop. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

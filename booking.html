@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbershop - Запись</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__text">BarberShop</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <svg></svg>
+                        <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+                        <li class="nav__item"><a href="services.html" class="nav__link">Услуги</a></li>
+                        <li class="nav__item"><a href="booking.html" class="nav__link active">Запись</a></li>
+                        <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header__phone">
+                    <a href="tel:+375(17)399-33-89" class="phone-link">+375(17)399-33-89</a>
+                </div>
+                <button class="menu-toggle" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <aside>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Онлайн-запись</h1>
+                <ul class="breadcrumbs">
+                    <li><a href="index.html">Главная</a></li>
+                    <li>Запись</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="booking">
+            <div class="container">
+                <div class="booking__inner">
+                    <div class="booking__form-container">
+                        <h2 class="booking__title">Заполните форму записи</h2>
+                        <form id="booking-form" class="booking-form" action="https://formspree.io/f/xanooezz"
+                        method="POST">
+                            <div class="form-group">
+                                <label for="name">Ваше имя <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Телефон <span class="required">*</span></label>
+                                <input type="tel" id="phone" name="phone" placeholder="+375 (__) ___-__-__" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="service">Выберите услугу <span class="required">*</span></label>
+                                <div class="service-item">
+                                    <input type="radio" name="service" id="Мужская стрижка" value="Мужская стрижка" required>
+                                    <label for="Мужская стрижка">Мужская стрижка (40 BYN)</label>
+                                </div>
+                                <div class="service-item">
+                                    <input type="radio" name="service" id="Оформление бороды" value="Оформление бороды">
+                                    <label for="Оформление бороды">Оформление бороды (23 BYN)</label>
+                                </div>
+                                <div class="service-item">
+                                    <input type="radio" name="service" id="Комплекс" value="Комплекс">
+                                    <label for="Комплекс">Комплекс: стрижка + борода (57 BYN)</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="date">Дата <span class="required">*</span></label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                            <label for="master">Мастер<span class="required">*</span></label>
+                                <select id="master" name="master" required>
+                                    <option value="">Выберите мастера</option>
+                                    <option value="Александр">Александр</option>
+                                    <option value="Максим">Максим</option>
+                                    <option value="Дмитрий">Дмитрий</option>
+                                    <option value="Сергей">Сергей</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Время <span class="required">*</span></label>
+                                <select id="time" name="time" required>
+                                    <option value="">Выберите время</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="17:00">17:00</option>
+                                    <option value="18:00">18:00</option>
+                                    <option value="19:00">19:00</option>
+                                    <option value="20:00">20:00</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="comment">Комментарий</label>
+                                <textarea id="comment" name="comment" rows="3"></textarea>
+                            </div>
+                            <div class="form-footer">
+                                <button type="submit" class="btn btn--primary">Записаться</button>
+                                <p class="form-note">Нажимая на кнопку, вы даете согласие на обработку персональных данных</p>
+                            </div>
+                        </form>
+                        <div id="booking-success" class="booking-success">
+                            <div class="booking-success__inner">
+                                <div class="booking-success__icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <h3 class="booking-success__title">Запись успешно создана!</h3>
+                                <p class="booking-success__text">Мы свяжемся с вами для подтверждения записи</p>
+                                <button class="btn btn--primary" id="newBookingBtn">Новая запись</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="booking__info">
+                        <div class="info-card">
+                            <h3 class="info-card__title">
+                                <i class="fas fa-info-circle"></i> Информация о записи
+                            </h3>
+                            <ul class="info-card__list">
+                                <li>После заполнения формы ваша запись будет создана в системе</li>
+                                <li>Наш администратор свяжется с вами для подтверждения записи</li>
+                                <li>Предоплата не требуется</li>
+                                <li>В случае необходимости отмены записи, пожалуйста, сообщите нам не менее чем за 3 часа</li>
+                            </ul>
+                        </div>
+                        <div class="info-card">
+                            <h3 class="info-card__title">
+                                <i class="fas fa-clock"></i> Режим работы
+                            </h3>
+                            <ul class="info-card__list info-card__list--hours">
+                                <li><span>Понедельник - Пятница:</span> <span>10:00 - 21:00</span></li>
+                                <li><span>Суббота - Воскресенье:</span> <span>10:00 - 20:00</span></li>
+                            </ul>
+                        </div>
+                        <div class="info-card">
+                            <h3 class="info-card__title">
+                                <i class="fas fa-phone-alt"></i> Контактный телефон
+                            </h3>
+                            <p class="info-card__phone">
+                                <a href="tel:+375(17)399-33-89">+375(17)399-33-89</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="booking-steps">
+            <div class="container">
+                <h2 class="section-title">Как записаться на стрижку?</h2>
+                <div class="steps">
+                    <div class="step-item">
+                        <div class="step-item__number">1</div>
+                        <h3 class="step-item__title">Выберите услугу</h3>
+                        <p class="step-item__text">Ознакомьтесь с нашими услугами и выберите подходящую</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-item__number">2</div>
+                        <h3 class="step-item__title">Выберите дату и время</h3>
+                        <p class="step-item__text">Укажите удобную для вас дату и время посещения</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-item__number">3</div>
+                        <h3 class="step-item__title">Заполните форму</h3>
+                        <p class="step-item__text">Введите ваши контактные данные для связи</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-item__number">4</div>
+                        <h3 class="step-item__title">Получите подтверждение</h3>
+                        <p class="step-item__text">Мы свяжемся с вами для подтверждения записи</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reviews">
+            <div class="container">
+                <h2 class="section-title">Отзывы наших клиентов</h2>
+                <div class="reviews-slider">
+                    <div class="review-item">
+                        <div class="review-item__content">
+                            <div class="review-item__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="review-item__text">Очень удобная система записи! Заполнил форму, и через 5 минут перезвонили для подтверждения. Стрижка тоже на высоте!</p>
+                            <div class="review-item__author">Дмитрий М.</div>
+                        </div>
+                    </div>
+                    <div class="review-item">
+                        <div class="review-item__content">
+                            <div class="review-item__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="review-item__text">Записался на стрижку онлайн, всё очень быстро и понятно. Мастер был готов к моему приходу, не пришлось ждать. Рекомендую!</p>
+                            <div class="review-item__author">Сергей К.</div>
+                        </div>
+                    </div>
+                    <div class="review-item">
+                        <div class="review-item__content">
+                            <div class="review-item__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="review-item__text">Отличный сервис для записи. Всё понятно и просто. Единственное, хотелось бы больше свободных окошек в выходные дни.</p>
+                            <div class="review-item__author">Андрей В.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </aside>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__col">
+                    <a href="index.html" class="logo footer__logo">
+                        <span class="logo__text">BarberShop</span>
+                    </a>
+                    <p class="footer__desc">Профессиональный барбершоп для современных мужчин</p>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Навигация</h4>
+                    <ul class="footer__nav">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="services.html">Услуги</a></li>
+                        <li><a href="booking.html">Запись</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Контакты</h4>
+                    <ul class="footer__contacts">
+                        <li><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Примерная, 123</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+375(17)399-33-89">tel:+375(17)399-33-89</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@barbershop.ru">info@barbershop.by</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Время работы</h4>
+                    <ul class="footer__hours">
+                        <li>Пн-Пт: 10:00 - 21:00</li>
+                        <li>Сб-Вс: 10:00 - 20:00</li>
+                    </ul>
+                    <div class="footer__social">
+                        <a href="#" class="social-link"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="social-link"><svg style="width: 22px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.5.5.2.9.5 1.3 1 .4.4.7.8 1 1.3.2.4.4 1 .5 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.5 2.2-.2.5-.5.9-1 1.3-.4.4-.8.7-1.3 1-.4.2-1 .4-2.2.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.5-.5-.2-.9-.5-1.3-1-.4-.4-.7-.8-1-1.3-.2-.4-.4-1-.5-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.5-2.2.2-.5.5-.9 1-1.3.4-.4.8-.7 1.3-1 .4-.2 1-.4 2.2-.5C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1 .1-1.5.2-1.9.4-.5.2-.8.4-1.1.7-.3.3-.6.7-.7 1.1-.2.4-.3.9-.4 1.9-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1 .2 1.5.4 1.9.2.5.4.8.7 1.1.3.3.7.6 1.1.7.4.2.9.3 1.9.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1-.1 1.5-.2 1.9-.4.5-.2.8-.4 1.1-.7.3-.3.6-.7.7-1.1.2-.4.3-.9.4-1.9.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1-.2-1.5-.4-1.9-.2-.5-.4-.8-.7-1.1-.3-.3-.7-.6-1.1-.7-.4-.2-.9-.3-1.9-.4-1.2-.1-1.6-.1-4.7-.1zm0 3.7a5.1 5.1 0 1 1 0 10.2 5.1 5.1 0 0 1 0-10.2zm0 1.8a3.3 3.3 0 1 0 0 6.6 3.3 3.3 0 0 0 0-6.6zm5.2-2.1a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/>
+            </svg></a>
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2025 BarberShop. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
