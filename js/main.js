@@ -237,7 +237,7 @@ function validateForm(form) {
     return isValid;
 }
 const form = document.getElementById("booking-form");
-  const status = document.getElementById("form-status");
+  const statusMessage = document.getElementById("form-status");
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -251,17 +251,17 @@ const form = document.getElementById("booking-form");
     });
 
     if (response.ok) {
-      status.textContent = "Спасибо! Ваша заявка принята.";
-      status.style.color = "green";
+      statusMessage.textContent = "Спасибо! Ваша заявка принята.";
+      statusMessage.style.color = "green";
       form.reset();
     } else {
       const result = await response.json();
       if (result.errors) {
-        status.textContent = result.errors.map(error => error.message).join(", ");
+        statusMessage.textContent = result.errors.map(error => error.message).join(", ");
       } else {
-        status.textContent = "Произошла ошибка при отправке формы.";
+        statusMessage.textContent = "Произошла ошибка при отправке формы.";
       }
-      status.style.color = "red";
+      statusMessage.style.color = "red";
     }
   }
 
